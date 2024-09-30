@@ -1,4 +1,4 @@
-# Weather and News Aggregator
+# Weather & Vibes
 
 This project is a Django-based web application that aggregates weather data and news headlines. It provides users with optimal times for outdoor activities based on weather conditions and displays the latest news headlines.
 
