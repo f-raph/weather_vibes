@@ -7,8 +7,10 @@
   <title>home</title>
 </head>
 
-<h1>Weather Event Planner</h1>
-<form method="POST">
-  {% csrf_token %} {{ form.as_p }}
-  <button type="submit">Find Optimal Times</button>
-</form>
+<body>
+  <h1>Weather Event Planner</h1>
+  <form method="POST">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Find Optimal Times</button>
+  </form>
+</body>
