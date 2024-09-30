@@ -31,7 +31,16 @@ This project is a Django-based web application that aggregates weather data and 
    pip install -r requirements.txt
    ```
 
-4. **Run the development server:**
+4. **Set up environment variables:**
+
+   Create a `.env` file in the project root and add your API keys:
+
+   ```plaintext
+   WEATHER_API_KEY=your_weather_api_key
+   NEWS_API_KEY=your_news_api_key
+   ```
+
+5. **Run the development server:**
 
    ```bash
    python manage.py runserver
