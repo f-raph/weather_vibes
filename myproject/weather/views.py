@@ -3,6 +3,7 @@ from django.shortcuts import render
 from .forms import WeatherPreferencesForm
 from datetime import datetime
 import sys
+from django.conf import settings
 
 ACTIVITIES = [
     {"name": "Hiking", "temp_min": 10, "temp_max": 21},   # ~10 to 21°C
@@ -29,13 +30,13 @@ def get_location():
     }
 #fetch weather data
 def fetch_weather(lat, lon):
-    api_key='b732e3951546f51218c18283691d8e94'
+    api_key=settings.WEATHER_API_TOKEN
     url = f"http://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&units=metric&appid={api_key}"
     response = requests.get(url)
     return response.json()
 #fetch news headlines
 def fetch_headlines():
-    NEWS_API_KEY = 'd25e4bd16a2f43dc9fda31b3919bef53' 
+    NEWS_API_KEY=settings.NEWS_API_TOKEN
     url = f"https://newsapi.org/v2/top-headlines?language=en&apiKey={NEWS_API_KEY}"
     """ response = requests.get(url)
     return response.json() """
